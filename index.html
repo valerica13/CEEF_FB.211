@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pozele absolvenților FB-211</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #7f996e;
+      color: #333333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+      background-color: #cba2eb;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #secret {
+      display: none;
+      margin-top: 2rem;
+      background: #aec4a7;
+      padding: 1rem;
+      border-left: 4px #3a5930;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    input, button {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CEEF Pozele absolvenților FB-211</h1>
+    <p>Parola:</p>
+    <input type="password" id="code" placeholder="Introdu codul de acces">
+    <br>
+    <button onclick="checkCode()">Acceseaz&#259;</button>
+
+    <div id="secret">
+      <p> My love, you know that my love for you is pure. No intentions. Just pure, sincere love. You are a part of me. And I know I am a part of you. Please rememeber all of our beautiful memories together and know that there are so many more to come only if you're willing to fight for your freedom. </p>
+     <p>I swore that you are my first and last love and it will always be like this. I don't want it to end and be remembered as a "stupid teenager mistake". I want a life with you. I need you. I am never giving up. Please, stay strong and keep fighting. For me, for us, for YOURSELF. I beg you. I'll give you the life and happiness you deserve. I'll do anything for you </p>
+<p>It's not me vs. your family. I dont want it to be, you know I want you all to be together, but it a family where you are respected and loved and I'm gonna fight for that. We're not fighting people right now, we're fighting christian manipulation. There is nothing wrong in our love, nothing unchristian in it, it's not christianity that's our enemy, its homophobia. We can work to change the world and make it a better place so that children don't have to go through what you did. And their threats cannot scare me away. Im stubborn and my love for you is what drives me.</p>
+<p>I will never stop loving you. So please, don't stop loving me either. You're my everything. Without you there's no meaning in my life.</p>
+
+    </div>
+  </div>
+
+  <script>
+    function checkCode() {
+      const validWords = ["siliotka", "siliodca"];
+      const input = document.getElementById("code").value.toLowerCase();
+      if (validWords.includes(input)) {
+        document.getElementById("secret").style.display = "block";
+      } else {
+        alert("Safe word");
+      }
+    }
+
+    // Enable Enter key functionality
+    document.getElementById("code").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        checkCode();
+      }
+    });
+  </script>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "02b0a23415144b35ba26b67f62415c76"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
